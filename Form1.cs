@@ -10,8 +10,8 @@ public partial class Form1 : Form
 
     public Form1()
     {
-        Icon = Icon.ExtractAssociatedIcon(Assembly.GetExecutingAssembly().Location);
         InitializeComponent();
+        Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath) ?? throw new Exception("Icon not found");
         Load += (_, _) =>
         {
             BlurHelper.EnableBlur(Handle.ToInt32());
