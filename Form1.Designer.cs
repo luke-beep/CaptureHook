@@ -21,7 +21,7 @@
                 }
                 if (_keyHooking != null)
                 {
-                    KeyHookingService.Dispose(); // Ensure your hook is disposed
+                    KeyHookingService.Dispose();
                 }
             }
             base.Dispose(disposing);
